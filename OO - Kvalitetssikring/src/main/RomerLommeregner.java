@@ -2,10 +2,14 @@ package main;
 
 public class RomerLommeregner {
 
-	public String add(String romerTalEt, String romerTalTo) {
-		if (romerTalEt == "I" && romerTalTo == "V")
-			return romerTalTo + romerTalEt;
-		return romerTalEt + romerTalTo;
+	public String add(String romEt){
+		return romEt;
+	}
+	
+	public String add(String romEt, String romTo) {
+		if (romEt == "I" && romTo == "V")
+			return romTo + romEt;
+		return romEt + romTo;
 	}
 
 }
