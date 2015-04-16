@@ -24,6 +24,8 @@ public class RomerLommeregner {
 			oprundTil("C");
 		if(sb.toString().equals("CCCCC"))
 			oprundTil("D");
+		if(sb.toString().equals("DD"))
+			oprundTil("M");
 		return result;
 
 	}
@@ -46,6 +48,8 @@ public class RomerLommeregner {
 		case "D":
 			result = "D";
 			break;
+		case ("M"):
+			result = "M";
 		}
 	}
 
