@@ -27,11 +27,10 @@ public class RomerLommeregnerTest {
 		assertEquals("V", new RomerLommeregner().add("III", "II"));
 	}
 	
-	/*	Ventertil jeg forstår casen bedre
 	@Test
-	public void testIPlusVIEqualsVI() {
-		assertEquals("VII", new RomerLommeregner().add("I", "V", "I"));
+	public void testVPlusVEqualsX() {
+		assertEquals("X", new RomerLommeregner().add("V", "V"));
 	}
-	*/
+	
 
 }
