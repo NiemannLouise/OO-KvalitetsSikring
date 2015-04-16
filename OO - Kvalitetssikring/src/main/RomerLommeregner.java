@@ -2,30 +2,51 @@ package main;
 
 public class RomerLommeregner {
 
+	private String result = "";
+	
 	public String add(String romEt, String romTo) {
 
 		StringBuilder sb = new StringBuilder();
 		sb.append(romEt);
 		sb.append(romTo);
-		String result = sb.toString();
+		result = sb.toString();
 
 		if (romEt == "I" && romTo == "V")
 			return romTo + romEt;
 
 		if (sb.toString().equals("IIIII"))
-			result = "V";
-
+			oprundTil("V");
 		if (sb.toString().equals("VV"))
-			result = "X";
-
+			oprundTil("X");
 		if (sb.toString().equals("XXXXX"))
-			result = "L";
-		
+			oprundTil("L");
 		if(sb.toString().equals("LL"))
-			result = "C";
-
+			oprundTil("C");
+		if(sb.toString().equals("CCCCC"))
+			oprundTil("D");
 		return result;
 
+	}
+	
+	private void oprundTil(String romerTal) {
+		
+		switch(romerTal) {
+		case "V":
+			result = "V";
+			break;
+		case "X":
+			result = "X";
+			break;
+		case "L":
+			result = "L";
+			break;
+		case "C":
+			result = "C";
+			break;
+		case "D":
+			result = "D";
+			break;
+		}
 	}
 
 }
