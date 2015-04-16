@@ -22,7 +22,7 @@ public class RomerLommeregner {
 			result = "L";
 		
 		if(sb.toString().equals("LL"))
-			result = "D";
+			result = "C";
 
 		return result;
 
