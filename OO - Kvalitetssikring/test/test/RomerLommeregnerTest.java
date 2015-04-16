@@ -7,6 +7,9 @@ import org.junit.Test;
 
 public class RomerLommeregnerTest {
 	
+	// MMMM D CCCC L XXXX V IIII 
+	
+	//Almindelige plus-stykker
 	@Test
 	public void testIEqualsI() {
 		assertEquals("I", new RomerLommeregner().add("I", ""));
@@ -22,6 +25,7 @@ public class RomerLommeregnerTest {
 		assertEquals("VI", new RomerLommeregner().add("I", "V"));
 	}
 	
+	//Simpel oprunding
 	@Test
 	public void testIIIPlusIIEqualsV() {
 		assertEquals("V", new RomerLommeregner().add("III", "II"));
@@ -30,6 +34,11 @@ public class RomerLommeregnerTest {
 	@Test
 	public void testVPlusVEqualsX() {
 		assertEquals("X", new RomerLommeregner().add("V", "V"));
+	}
+	
+	@Test
+	public void testXXXPlusXXEqualsL() {
+		assertEquals("L", new RomerLommeregner().add("XXX", "XX"));
 	}
 	
 
