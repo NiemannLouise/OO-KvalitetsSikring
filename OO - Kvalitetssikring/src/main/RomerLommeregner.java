@@ -15,6 +15,9 @@ public class RomerLommeregner {
 		if (sb.toString().equals("IIIII"))
 			result = "V";
 
+		if (sb.toString().equals("VV"))
+			result = "X";
+
 		return result;
 
 	}
