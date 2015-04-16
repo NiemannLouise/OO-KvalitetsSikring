@@ -46,11 +46,9 @@ public class RomerLommeregnerTest {
 		assertEquals("C", new RomerLommeregner().add("L", "L"));
 	}
 	
-	/*
 	@Test
-	public void testDDDPlusDDEqualsD() {
-		assertEquals("D", new RomerLommeregner().add("L", "L"));
+	public void testCCCPlusCCEqualsD() {
+		assertEquals("D", new RomerLommeregner().add("CCC", "CC"));
 	}
-	*/
 
 }
