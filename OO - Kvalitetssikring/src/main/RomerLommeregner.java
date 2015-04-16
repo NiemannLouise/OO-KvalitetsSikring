@@ -12,8 +12,4 @@ public class RomerLommeregner {
 		return romEt + romTo;
 	}
 
-	public String add(String romEt, String romTo, String romTre) {
-		return romEt + romTo + romTre;
-	}
-
 }
