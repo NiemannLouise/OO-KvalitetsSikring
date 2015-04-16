@@ -2,10 +2,6 @@ package main;
 
 public class RomerLommeregner {
 
-	public String add(String romEt) {
-		return romEt;
-	}
-
 	public String add(String romEt, String romTo) {
 
 		StringBuilder sb = new StringBuilder();
