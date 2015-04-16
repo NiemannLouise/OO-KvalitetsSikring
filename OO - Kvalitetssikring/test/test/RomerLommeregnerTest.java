@@ -11,5 +11,10 @@ public class RomerLommeregnerTest {
 	public void testTomTekstStreng() {
 		assertEquals("", new RomerLommeregner().add(""));
 	}
+	
+	@Test
+	public void testIEqualsI() {
+		assertEquals("I", new RomerLommeregner().add("I"));
+	}
 
 }
