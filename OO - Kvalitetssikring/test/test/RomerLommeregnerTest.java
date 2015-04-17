@@ -30,32 +30,34 @@ public class RomerLommeregnerTest {
 	public void testIIIPlusIIEqualsV() {
 		assertEquals("V", new RomerLommeregner("III", "II").add());
 	}
-	/*
+	
 	@Test
 	public void testVPlusVEqualsX() {
 		assertEquals("X", new RomerLommeregner("V", "V").add());
 	}
 	
+	
 	@Test
 	public void testXXXPlusXXEqualsL() {
-		assertEquals("L", new RomerLommeregner().add("XXX", "XX"));
+		assertEquals("L", new RomerLommeregner("XXX", "XX").add());
 	}
 	
 	@Test
 	public void testLPlusLEqualsC() {
-		assertEquals("C", new RomerLommeregner().add("L", "L"));
+		assertEquals("C", new RomerLommeregner("L", "L").add());
 	}
 	
 	@Test
 	public void testCCCPlusCCEqualsD() {
-		assertEquals("D", new RomerLommeregner().add("CCC", "CC"));
+		assertEquals("D", new RomerLommeregner("CCC", "CC").add());
 	}
 	
 	@Test
 	public void testDPlusDEqualsM() {
-		assertEquals("M", new RomerLommeregner().add("D", "D"));
+		assertEquals("M", new RomerLommeregner("D", "D").add());
 	}
 
+	/*
 	//Oprund + nedskriv
 	@Test
 	public void testIIIPlusIIIEqualsVI() {
