@@ -6,6 +6,14 @@ public class RomerLommeregner {
 	private String romertalTo = "";
 	private String result;
 	
+	//Set konstruktor
+	public RomerLommeregner(String romertalEt, String romertalTo, String result) {
+		this.romertalEt = romertalEt;
+		this.romertalTo = romertalTo;
+		this.result = result;
+		result = romertalEt + romertalTo;
+	}
+	
 	public String add(String romEt, String romTo) {
 
 		StringBuilder sb = new StringBuilder();
