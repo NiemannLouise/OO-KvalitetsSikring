@@ -62,4 +62,9 @@ public class RomerLommeregnerTest {
 	public void testIIIPlusIIIEqualsVI() {
 		assertEquals("VI", new RomerLommeregner("III", "III").add());
 	}
+	
+	@Test
+	public void testVPlusVIEqualsXI() {
+		assertEquals("XI", new RomerLommeregner("V", "VI").add());
+	}
 }
