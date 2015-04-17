@@ -48,10 +48,10 @@ public class RomerLommeregner {
 			result = result.replace("VV", "X");
 			break;
 		case "L":
-			result = "L";
+			result = result.replace("XXXXX", "L");
 			break;
 		case "C":
-			result = "C";
+			result = result.replace("LL", "C");
 			break;
 		case "D":
 			result = "D";

@@ -69,7 +69,7 @@ public class RomerLommeregnerTest {
 	}
 	
 	@Test
-	public void testXXXPlusXXVIEqualsXXXXXVI() {
-		assertEquals("XI", new RomerLommeregner("XXX", "XXVI").add());
+	public void testXXXPlusXXIEqualsXXVI() {
+		assertEquals("LVI", new RomerLommeregner("XXX", "XXVI").add());
 	}
 }
