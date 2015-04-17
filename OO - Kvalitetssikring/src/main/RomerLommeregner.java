@@ -5,6 +5,7 @@ public class RomerLommeregner {
 	private String romertalEt = "";
 	private String romertalTo = "";
 	private String result;
+	private StringBuilder sb = new StringBuilder();
 	
 	//Set konstruktor
 	public RomerLommeregner(String romertalEt, String romertalTo, String result) {
@@ -16,7 +17,6 @@ public class RomerLommeregner {
 	
 	public String add(String romEt, String romTo) {
 
-		StringBuilder sb = new StringBuilder();
 		sb.append(romEt);
 		sb.append(romTo);
 		result = sb.toString();
