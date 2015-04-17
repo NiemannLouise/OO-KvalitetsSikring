@@ -10,13 +10,13 @@ public class RomerLommeregner {
 	public RomerLommeregner(String romertalEt, String romertalTo) {
 		this.romertalEt = romertalEt;
 		this.romertalTo = romertalTo;
-
+		
 		sb.append(romertalEt);
 		sb.append(romertalTo);
 
 		result = sb.toString();
 	}
-
+	
 	public String add() {
 
 		if (romertalEt == "I" && romertalTo == "V")
