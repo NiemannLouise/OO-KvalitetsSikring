@@ -2,7 +2,9 @@ package main;
 
 public class RomerLommeregner {
 
-	private String result = "";
+	private String romertalEt = "";
+	private String romertalTo = "";
+	private String result;
 	
 	public String add(String romEt, String romTo) {
 
@@ -14,7 +16,7 @@ public class RomerLommeregner {
 		if (romEt == "I" && romTo == "V")
 			return romTo + romEt;
 
-		if (sb.toString().equals("IIIII"))
+		if (sb.toString().contains("IIIII"))
 			oprundTil("V");
 		if (sb.toString().equals("VV"))
 			oprundTil("X");
@@ -34,7 +36,8 @@ public class RomerLommeregner {
 		
 		switch(romerTal) {
 		case "V":
-			result = "V";
+			result.dele
+			result.replace("IIIII", "V");
 			break;
 		case "X":
 			result = "X";
