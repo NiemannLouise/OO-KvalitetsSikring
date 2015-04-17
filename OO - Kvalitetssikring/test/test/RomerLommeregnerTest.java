@@ -84,7 +84,7 @@ public class RomerLommeregnerTest {
 	}
 	
 	@Test
-	public void testMDDDDPlusDDVIqualsMMDDVI() {
-		assertEquals("MMDDVI", new RomerLommeregner("MDDDD", "DDVI").add());
+	public void testMMMPlusDDVIqualsMMDDVI() {
+		assertEquals("MMMMVI", new RomerLommeregner("MDDDD", "DDVI").add());
 	}
 }

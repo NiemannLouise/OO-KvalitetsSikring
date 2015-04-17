@@ -57,7 +57,7 @@ public class RomerLommeregner {
 			result = result.replace("CCCCC", "D");
 			break;
 		case ("M"):
-			result = "M";
+			result = result.replace("DD", "M");
 		}
 	}
 
