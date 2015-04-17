@@ -7,7 +7,6 @@ public class RomerLommeregner {
 	private String result;
 	private StringBuilder sb = new StringBuilder();
 	
-	//Set konstruktor
 	public RomerLommeregner(String romertalEt, String romertalTo) {
 		this.romertalEt = romertalEt;
 		this.romertalTo = romertalTo;
@@ -18,12 +17,7 @@ public class RomerLommeregner {
 		result = sb.toString();
 	}
  
-	
 	public String add() {
-
-		//sb.append(romertalEt);
-		//sb.append(romertalTo);
-		//result = sb.toString();
 
 		if (romertalEt == "I" && romertalTo == "V")
 			return romertalTo + romertalEt;
