@@ -6,17 +6,17 @@ public class RomerLommeregner {
 	private String romertalTo = "";
 	private String result;
 	private StringBuilder sb = new StringBuilder();
-	
+
 	public RomerLommeregner(String romertalEt, String romertalTo) {
 		this.romertalEt = romertalEt;
 		this.romertalTo = romertalTo;
-		
+
 		sb.append(romertalEt);
 		sb.append(romertalTo);
-		
+
 		result = sb.toString();
 	}
- 
+
 	public String add() {
 
 		if (romertalEt == "I" && romertalTo == "V")
@@ -24,25 +24,25 @@ public class RomerLommeregner {
 
 		if (sb.toString().contains("IIIII"))
 			oprundTil("V");
-		if (sb.toString().equals("VV"))
+		if (sb.toString().contains("VV"))
 			oprundTil("X");
-		if (sb.toString().equals("XXXXX"))
+		if (sb.toString().contains("XXXXX"))
 			oprundTil("L");
-		if(sb.toString().equals("LL"))
+		if (sb.toString().contains("LL"))
 			oprundTil("C");
-		if(sb.toString().equals("CCCCC"))
+		if (sb.toString().contains("CCCCC"))
 			oprundTil("D");
-		if(sb.toString().equals("DD"))
+		if (sb.toString().contains("DD"))
 			oprundTil("M");
 		return result;
 
 	}
-	
+
 	private void oprundTil(String romerTal) {
-		
-		switch(romerTal) {
+
+		switch (romerTal) {
 		case "V":
-			result = "V";
+			result = result.replace("IIIII", "V");
 			break;
 		case "X":
 			result = "X";
