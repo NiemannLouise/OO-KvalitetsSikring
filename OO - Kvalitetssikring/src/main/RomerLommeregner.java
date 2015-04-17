@@ -8,21 +8,20 @@ public class RomerLommeregner {
 	private StringBuilder sb = new StringBuilder();
 	
 	//Set konstruktor
-	public RomerLommeregner(String romertalEt, String romertalTo, String result) {
+	public RomerLommeregner(String romertalEt, String romertalTo) {
 		this.romertalEt = romertalEt;
 		this.romertalTo = romertalTo;
-		this.result = result;
-		result = romertalEt + romertalTo;
 	}
+ 
 	
-	public String add(String romEt, String romTo) {
+	public String add() {
 
-		sb.append(romEt);
-		sb.append(romTo);
+		sb.append(romertalEt);
+		sb.append(romertalTo);
 		result = sb.toString();
 
-		if (romEt == "I" && romTo == "V")
-			return romTo + romEt;
+		if (romertalEt == "I" && romertalTo == "V")
+			return romertalTo + romertalEt;
 
 		if (sb.toString().contains("IIIII"))
 			oprundTil("V");
@@ -44,8 +43,7 @@ public class RomerLommeregner {
 		
 		switch(romerTal) {
 		case "V":
-			result.dele
-			result.replace("IIIII", "V");
+			result = "V";
 			break;
 		case "X":
 			result = "X";
