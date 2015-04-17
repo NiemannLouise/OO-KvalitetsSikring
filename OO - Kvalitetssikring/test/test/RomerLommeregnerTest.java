@@ -75,6 +75,6 @@ public class RomerLommeregnerTest {
 	
 	@Test
 	public void testLPlusLLXIEqualsCLXI() {
-		assertEquals("CLXI", new RomerLommeregner("L", "LLXIE").add());
+		assertEquals("CLXI", new RomerLommeregner("L", "LLXI").add());
 	}
 }
