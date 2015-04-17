@@ -57,10 +57,9 @@ public class RomerLommeregnerTest {
 		assertEquals("M", new RomerLommeregner("D", "D").add());
 	}
 
-	/*
 	//Oprund + nedskriv
 	@Test
 	public void testIIIPlusIIIEqualsVI() {
-		assertEquals("VI", new RomerLommeregner().add("III", "III"));
-	}*/
+		assertEquals("VI", new RomerLommeregner("III", "III").add());
+	}
 }
