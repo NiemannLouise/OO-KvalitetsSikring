@@ -79,7 +79,12 @@ public class RomerLommeregnerTest {
 	}
 	
 	@Test
-	public void testCCCCPlusCCLXIEqualsCLXI() {
+	public void testCCCCPlusCCLXIEqualsDCLXI() {
 		assertEquals("DCLXI", new RomerLommeregner("CCCC", "CCLXI").add());
+	}
+	
+	@Test
+	public void testMDDDDPlusDDVIqualsMMDDVI() {
+		assertEquals("MMDDVI", new RomerLommeregner("MDDDD", "DDVI").add());
 	}
 }
