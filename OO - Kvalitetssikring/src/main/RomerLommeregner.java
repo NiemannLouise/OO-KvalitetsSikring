@@ -17,10 +17,6 @@ public class RomerLommeregner {
 	
 	public String add() {
 
-		//sb.append(romertalEt);
-		//sb.append(romertalTo);
-		//result = sb.toString();
-
 		if (romertalEt == "I" && romertalTo == "V")
 			return romertalTo + romertalEt;
 

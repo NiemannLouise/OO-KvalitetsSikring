@@ -14,26 +14,26 @@ public class RomerLommeregnerTest {
 	public void testIEqualsI() {
 		assertEquals("I", new RomerLommeregner("I", "").add());
 	}
-	 /*
+	 
 	@Test
 	public void testIPlusIEqualsI() {
-		assertEquals("II", new RomerLommeregner().add("I", "I"));
+		assertEquals("II", new RomerLommeregner("I", "I").add());
 	}
 	
 	@Test
 	public void testIPlusVEqualsVI() {
-		assertEquals("VI", new RomerLommeregner().add("I", "V"));
+		assertEquals("VI", new RomerLommeregner("I", "V").add());
 	}
 	
 	//Simpel oprunding
 	@Test
 	public void testIIIPlusIIEqualsV() {
-		assertEquals("V", new RomerLommeregner().add("III", "II"));
+		assertEquals("V", new RomerLommeregner("III", "II").add());
 	}
-	
+	/*
 	@Test
 	public void testVPlusVEqualsX() {
-		assertEquals("X", new RomerLommeregner().add("V", "V"));
+		assertEquals("X", new RomerLommeregner("V", "V").add());
 	}
 	
 	@Test
