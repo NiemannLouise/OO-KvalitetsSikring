@@ -5,7 +5,16 @@ public class RomerLommeregner {
 	private String romertalEt = "";
 	private String romertalTo = "";
 	private String result;
-	private StringBuilder sb = new StringBuilder();
+	
+	private String collectionI = "";
+	private String collectionV = "";
+	private String collectionX = "";
+	private String collectionL = "";
+	private String collectionC = "";
+	private String collectionD = "";
+	private String collectionM = "";
+	
+	private StringBuilder sb = new StringBuilder(); 
 
 	public RomerLommeregner(String romertalEt, String romertalTo) {
 		this.romertalEt = romertalEt;
@@ -22,17 +31,17 @@ public class RomerLommeregner {
 		if (romertalEt == "I" && romertalTo == "V")
 			return romertalTo + romertalEt;
 
-		if (sb.toString().contains("IIIII"))
+		if (result.contains("IIIII"))
 			oprundTil("V");
-		if (sb.toString().contains("VV"))
+		if (result.contains("VV"))
 			oprundTil("X");
-		if (sb.toString().contains("XXXXX"))
+		if (result.contains("XXXXX"))
 			oprundTil("L");
-		if (sb.toString().contains("LL"))
+		if (result.contains("LL"))
 			oprundTil("C");
-		if (sb.toString().contains("CCCCC"))
+		if (result.contains("CCCCC"))
 			oprundTil("D");
-		if (sb.toString().contains("DD"))
+		if (result.contains("DD"))
 			oprundTil("M");
 		return result;
 
@@ -58,6 +67,13 @@ public class RomerLommeregner {
 			break;
 		case ("M"):
 			result = result.replace("DD", "M");
+		}
+	}
+	
+	private void sortRoman() {
+		if(result.contains("I")){
+			result = result.replace("I", "");
+			collectionI = collectionI.replace("", "I");
 		}
 	}
 
