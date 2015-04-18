@@ -5,22 +5,36 @@ public class RomerLommeregner {
 	private String romertalEt = "";
 	private String romertalTo = "";
 	private String result;
+	private String finalResult;
 	
 	private StringBuilder sb = new StringBuilder();
+	
+	private StringBuilder sbI = new StringBuilder();
+	
 	private StringBuilder finalSB = new StringBuilder();
 
+	//Konstruktor
 	public RomerLommeregner(String romertalEt, String romertalTo) {
 		this.romertalEt = romertalEt;
 		this.romertalTo = romertalTo;
 		
-		sb.append(romertalEt);
-		sb.append(romertalTo);
+		sb.append(romertalEt).append(romertalTo);
 		result = sb.toString();
+		
+		finalSB.append(sbI);		
+		finalResult = finalSB.toString();
 		
 	}
 	
 	public String add() {
 
+		//Prøver
+		if(result.contains("I")){
+			sortRoman();
+			return finalResult;
+				
+		}
+		
 		if (romertalEt == "I" && romertalTo == "V")
 			return romertalTo + romertalEt;
 
@@ -64,9 +78,8 @@ public class RomerLommeregner {
 	}
 	
 	private void sortRoman() {
-		if(result.contains("I")){
-			result = result.replace("I", "");
-		}
+		result = result.replace("I", "");
+		finalResult = finalResult.replace("", "I");
 	}
 
 }
