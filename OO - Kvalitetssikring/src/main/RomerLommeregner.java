@@ -6,15 +6,8 @@ public class RomerLommeregner {
 	private String romertalTo = "";
 	private String result;
 	
-	private String collectionI = "";
-	private String collectionV = "";
-	private String collectionX = "";
-	private String collectionL = "";
-	private String collectionC = "";
-	private String collectionD = "";
-	private String collectionM = "";
-	
-	private StringBuilder sb = new StringBuilder(); 
+	private StringBuilder sb = new StringBuilder();
+	private StringBuilder finalSB = new StringBuilder();
 
 	public RomerLommeregner(String romertalEt, String romertalTo) {
 		this.romertalEt = romertalEt;
@@ -22,8 +15,8 @@ public class RomerLommeregner {
 		
 		sb.append(romertalEt);
 		sb.append(romertalTo);
-
 		result = sb.toString();
+		
 	}
 	
 	public String add() {
@@ -31,7 +24,7 @@ public class RomerLommeregner {
 		if (romertalEt == "I" && romertalTo == "V")
 			return romertalTo + romertalEt;
 
-		if (result.contains("IIIII"))
+		if (result.contains("IIIII")){
 			oprundTil("V");
 		if (result.contains("VV"))
 			oprundTil("X");
@@ -43,8 +36,8 @@ public class RomerLommeregner {
 			oprundTil("D");
 		if (result.contains("DD"))
 			oprundTil("M");
+		}
 		return result;
-
 	}
 
 	private void oprundTil(String romerTal) {
@@ -73,7 +66,6 @@ public class RomerLommeregner {
 	private void sortRoman() {
 		if(result.contains("I")){
 			result = result.replace("I", "");
-			collectionI = collectionI.replace("", "I");
 		}
 	}
 
