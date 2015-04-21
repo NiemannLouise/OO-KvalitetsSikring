@@ -21,13 +21,12 @@ public class RomerLommeregnerTest {
 		assertEquals("II", new RomerLommeregner("I", "I").add());
 	}
 	
-	/*
 	//Simpel oprunding
 	@Test
 	public void testIIIPlusIIEqualsV() {
 		assertEquals("V", new RomerLommeregner("III", "II").add());
 	}
-	
+	/*
 	@Test
 	public void testVPlusVEqualsX() {
 		assertEquals("X", new RomerLommeregner("V", "V").add());
