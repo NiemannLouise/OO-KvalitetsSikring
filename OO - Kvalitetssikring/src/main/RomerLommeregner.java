@@ -4,13 +4,10 @@ public class RomerLommeregner {
 
 	private String romertalEt = "";
 	private String romertalTo = "";
+	private String mellemled;
 	private String result;
-	private String finalResult;
 	
 	private StringBuilder sb = new StringBuilder();
-	
-	private StringBuilder sbI = new StringBuilder();
-	
 	private StringBuilder finalSB = new StringBuilder();
 
 	//Konstruktor
@@ -19,62 +16,56 @@ public class RomerLommeregner {
 		this.romertalTo = romertalTo;
 		
 		sb.append(romertalEt).append(romertalTo);
-		result = sb.toString();
+		mellemled = sb.toString();
 		
-		finalSB.append(sbI);		
-		finalResult = finalSB.toString();
+		result = finalSB.toString();
 		
 	}
 	
 	public String add() {
 
-		//Prøver
-		while(result.contains("I")){
-			sortRoman();
-			if (finalResult.contains("IIIII")){
-				oprundTil("V");
-		}
+		while(mellemled.contains("M"))
+			sortRoman("M");
 		
-				if (result.contains("VV"))
-			oprundTil("X");
-		if (result.contains("XXXXX"))
-			oprundTil("L");
-		if (result.contains("LL"))
-			oprundTil("C");
-		if (result.contains("CCCCC"))
-			oprundTil("D");
-		if (result.contains("DD"))
-			oprundTil("M");
+		while(mellemled.contains("D")){
+			sortRoman("D");
+			if (result.contains("DD"))
+				oprundTil("DD", "M");
 		}
-		return finalResult;
-	}
-
-	private void oprundTil(String romerTal) {
-
-		switch (romerTal) {
-		case "V":
-			finalResult = finalResult.replace("IIIII", "V");
-			break;
-		case "X":
-			result = result.replace("VV", "X");
-			break;
-		case "L":
-			result = result.replace("XXXXX", "L");
-			break;
-		case "C":
-			result = result.replace("LL", "C");
-			break;
-		case "D":
-			result = result.replace("CCCCC", "D");
-			break;
-		case ("M"):
-			result = result.replace("DD", "M");
+		while(mellemled.contains("C")){
+			sortRoman("C");
+			if (result.contains("CCCCC"))
+				oprundTil("CCCCC", "D");
 		}
+		while(mellemled.contains("L")){
+			sortRoman("L");
+			if (result.contains("LL"))
+				oprundTil("LL", "C");
+		}
+		while(mellemled.contains("X")){
+			sortRoman("X");
+			if (result.contains("XXXXX"))
+				oprundTil("XXXXX", "L");
+		}
+		while(mellemled.contains("V")){
+			sortRoman("V");
+			if (result.contains("VV"))
+				oprundTil("VV", "X");
+		}
+		while(mellemled.contains("I")){
+			sortRoman("I");
+			if (result.contains("IIIII"))
+				oprundTil("IIIII", "V");
+			}
+			return result;
 	}
 	
-	private void sortRoman() {
-		result = result.replaceFirst("I", "");
-		finalResult = finalResult.replaceFirst("", "I");
+	private void oprundTil(String før, String efter) {
+		result = result.replace(før, efter);
 	}
-
+	
+	private void sortRoman(String romertal) {
+		mellemled = mellemled.replaceFirst(romertal, "");
+		result = result.replaceFirst("", romertal);
+	}
 }

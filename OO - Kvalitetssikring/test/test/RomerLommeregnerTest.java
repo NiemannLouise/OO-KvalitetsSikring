@@ -9,6 +9,12 @@ public class RomerLommeregnerTest {
 	
 	// MMMM D CCCC L XXXX V IIII 
 	
+	//Anders test case
+	@Test
+	public void testMCCXVIPlusDCCCCLXIEqualsMMCLXXVIII() {
+		assertEquals("MMCLXXVIII", new RomerLommeregner("MCCXVI", "DCCCCLXI").add());
+	}
+	
 	//Almindelige plus-stykker
 	@Test
 	public void testIEqualsI() {
@@ -21,10 +27,30 @@ public class RomerLommeregnerTest {
 		assertEquals("II", new RomerLommeregner("I", "I").add());
 	}
 	
+	@Test
+	public void testVEqualsV() {
+		assertEquals("V", new RomerLommeregner("V", "").add());
+	}
+	
+	@Test
+	public void testVPlusVEqualsX() {
+		assertEquals("X", new RomerLommeregner("V", "V").add());
+	}
+	
+	@Test
+	public void testXPlusXEqualsXX() {
+		assertEquals("L", new RomerLommeregner("XX", "XXX").add());
+	}
+	
 	//Simpel oprunding
 	@Test
 	public void testIIIPlusIIEqualsV() {
 		assertEquals("V", new RomerLommeregner("III", "II").add());
+	}
+	
+	@Test
+	public void testIPlusVEqualsVI() {
+		assertEquals("VI", new RomerLommeregner("I", "V").add());
 	}
 	/*
 	@Test
@@ -83,12 +109,6 @@ public class RomerLommeregnerTest {
 		assertEquals("MMMMVI", new RomerLommeregner("MDDDD", "DDVI").add());
 	}
 
-	//Omrokering i rækkefølge
-	@Test
-	public void testIPlusVEqualsVI() {
-		assertEquals("VI", new RomerLommeregner("I", "V").add());
-	}
-	
 	@Test
 	public void testVPlusXEqualsXV() {
 		assertEquals("XV", new RomerLommeregner("V", "X").add());
