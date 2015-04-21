@@ -30,15 +30,12 @@ public class RomerLommeregner {
 
 		//Prøver
 		while(result.contains("I")){
-			sortRoman();	
+			sortRoman();
+			if (finalResult.contains("IIIII")){
+				oprundTil("V");
 		}
 		
-		if (romertalEt == "I" && romertalTo == "V")
-			return romertalTo + romertalEt;
-
-		if (result.contains("IIIII")){
-			oprundTil("V");
-		if (result.contains("VV"))
+				if (result.contains("VV"))
 			oprundTil("X");
 		if (result.contains("XXXXX"))
 			oprundTil("L");
@@ -56,7 +53,7 @@ public class RomerLommeregner {
 
 		switch (romerTal) {
 		case "V":
-			result = result.replace("IIIII", "V");
+			finalResult = finalResult.replace("IIIII", "V");
 			break;
 		case "X":
 			result = result.replace("VV", "X");
