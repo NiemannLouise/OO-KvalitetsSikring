@@ -29,10 +29,8 @@ public class RomerLommeregner {
 	public String add() {
 
 		//Prøver
-		if(result.contains("I")){
-			sortRoman();
-			return finalResult;
-				
+		while(result.contains("I")){
+			sortRoman();	
 		}
 		
 		if (romertalEt == "I" && romertalTo == "V")
@@ -51,7 +49,7 @@ public class RomerLommeregner {
 		if (result.contains("DD"))
 			oprundTil("M");
 		}
-		return result;
+		return finalResult;
 	}
 
 	private void oprundTil(String romerTal) {
@@ -78,8 +76,8 @@ public class RomerLommeregner {
 	}
 	
 	private void sortRoman() {
-		result = result.replace("I", "");
-		finalResult = finalResult.replace("", "I");
+		result = result.replaceFirst("I", "");
+		finalResult = finalResult.replaceFirst("", "I");
 	}
 
 }

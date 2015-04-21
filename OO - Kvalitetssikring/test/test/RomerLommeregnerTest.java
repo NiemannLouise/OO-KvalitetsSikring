@@ -15,6 +15,7 @@ public class RomerLommeregnerTest {
 		assertEquals("I", new RomerLommeregner("I", "").add());
 	}
 	 
+	
 	@Test
 	public void testIPlusIEqualsII() {
 		assertEquals("II", new RomerLommeregner("I", "I").add());
