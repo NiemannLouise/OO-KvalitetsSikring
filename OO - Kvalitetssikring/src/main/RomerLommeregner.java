@@ -36,6 +36,9 @@ public class RomerLommeregner {
 			sortRoman("C");
 			if (result.contains("CCCCC"))
 				oprundTil("CCCCC", "D");
+			
+			if (result.contains("DD"))
+				oprundTil("DD", "M");
 		}
 		while(mellemled.contains("L")){
 			sortRoman("L");
@@ -66,6 +69,6 @@ public class RomerLommeregner {
 	
 	private void sortRoman(String romertal) {
 		mellemled = mellemled.replaceFirst(romertal, "");
-		result = result.replaceFirst("", romertal);
+		result = result + romertal;
 	}
 }
